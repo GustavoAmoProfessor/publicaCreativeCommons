@@ -1,0 +1,48 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		inteiro vetor[10],tamanho=10,j,auxiliar,indice
+	// Preenchimento do vetor
+        para (inteiro i =0; i<tamanho;i++){
+            vetor[i]=Util.sorteia(10,50)
+        }	
+//Fim do preenchimento do vetor
+ //escrever o vetor Original
+        escreva("Vetor original: ")
+        para (inteiro i =0; i<tamanho;i++){
+            escreva(vetor[i], " ")
+        }
+        escreva("\n")
+ //fim da escrita do vetor Original
+//Ordenação
+		para(inteiro i=0; i < tamanho-1; i++){
+			indice= i
+			para( j=i+1; j < tamanho; j++){
+				se (vetor[j] < vetor[indice]){
+                    	indice = j
+				}
+			}
+			auxiliar = vetor[i]
+               vetor[i] = vetor[indice]
+               vetor[indice] = auxiliar
+		}
+//Fim da ordenação
+escreva("Vetor ordenado: ")
+        para (inteiro i =0; i<tamanho;i++){
+            escreva(vetor[i], " ")
+        }
+	}
+}
+/* $$$ Portugol Studio $$$ 
+ * 
+ * Esta seção do arquivo guarda informações do Portugol Studio.
+ * Você pode apagá-la se estiver utilizando outro editor.
+ * 
+ * @POSICAO-CURSOR = 34; 
+ * @PONTOS-DE-PARADA = 17;
+ * @SIMBOLOS-INSPECIONADOS = {vetor, 6, 10, 5}-{j, 6, 31, 1}-{auxiliar, 6, 33, 8}-{indice, 6, 42, 6}-{i, 8, 22, 1}-{i, 14, 22, 1}-{i, 20, 15, 1}-{i, 33, 22, 1};
+ * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
+ * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
+ */
